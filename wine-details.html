@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Details - Gran Caffè L'Aquila</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="luxury-container">
+        <header class="luxury-header">
+            <div class="header-content">
+                <a href="#" class="back-button" id="backButton">
+                    <i class="fas fa-chevron-left"></i>
+                    <span id="backButtonText">Back to Wines</span>
+                </a>
+                <div class="logo-container">
+                    <div class="luxury-logo small has-image">
+                        <img src="image/gcaLogo.png" alt="Gran Caffè L'Aquila Logo" class="logo-image">
+                    </div>
+                    <h1 class="luxury-title small">GRAN CAFFÈ L'AQUILA</h1>
+                    <p class="luxury-subtitle small">present</p>
+                    <p class="luxury-subtitle small">WINE DETAILS</p>
+                </div>
+                <div style="width: 120px;"></div> <!-- Spacer for balance -->
+            </div>
+        </header>
+
+        <div class="breadcrumb" id="breadcrumb">
+            <!-- Breadcrumb will be dynamically generated -->
+        </div>
+
+        <main class="wine-details-container">
+            <div class="wine-details-content">
+                <div class="wine-image-section">
+                    <div class="wine-image" id="wineImageContainer">
+                        <i class="fas fa-wine-bottle wine-bottle" id="wineBottleIcon"></i>
+                        <img id="wineBottleImage" src="" alt="Wine bottle" style="display: none; max-width: 100%; max-height: 400px; object-fit: contain;">
+                    </div>
+                </div>
+                
+                <div class="wine-info-section">
+                    <h1 class="wine-name" id="wineName">Loading...</h1>
+                    <p class="wine-region" id="wineRegion">Loading...</p>
+                    <div class="wine-price" id="winePrice">Loading...</div>
+                    
+                    <div class="wine-meta" id="wineMeta">
+                        <!-- Meta information will be dynamically generated -->
+                    </div>
+                    
+                    <div class="wine-description" id="wineDescription">
+                        <!-- Wine description will be dynamically generated -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tasting Notes -->
+            <div class="tasting-notes" id="tastingNotes">
+                <h2 class="section-title">Tasting Notes</h2>
+                <div class="tasting-grid" id="tastingGrid">
+                    <!-- Tasting notes will be dynamically generated -->
+                </div>
+            </div>
+            
+            <!-- Wine Information -->
+            <div class="wine-information" id="wineInformation">
+                <h2 class="section-title">Wine Information</h2>
+                <div class="info-grid" id="infoGrid">
+                    <!-- Wine information will be dynamically generated -->
+                </div>
+            </div>
+            
+            <!-- Food Pairings -->
+            <div class="food-pairings" id="foodPairings">
+                <h2 class="section-title">Recommended Pairings</h2>
+                <div class="pairing-list" id="pairingList">
+                    <!-- Food pairings will be dynamically generated -->
+                </div>
+            </div>
+            
+            <!-- Producer Information -->
+            <div class="producer-info" id="producerInfo">
+                <h2 class="section-title">About the Producer</h2>
+                <h3 class="producer-name" id="producerName">Loading...</h3>
+                <p class="producer-description" id="producerDescription">
+                    <!-- Producer information will be dynamically generated -->
+                </p>
+            </div>
+            
+            <!-- Share Wine Section -->
+            <div class="share-wine-section">
+                <button class="share-wine-btn" id="shareWineBtn">
+                    <i class="fas fa-share-alt"></i>
+                    <span>Share the Wine</span>
+                </button>
+            </div>
+        </main>
+
+        <!-- Share Modal -->
+        <div class="share-modal" id="shareModal">
+            <div class="share-modal-content">
+                <div class="share-modal-header">
+                    <h3>Share this Wine</h3>
+                    <button class="close-share-modal" id="closeShareModal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="share-options">
+                    <div class="share-option" id="shareFacebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </div>
+                    <div class="share-option" id="shareInstagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="share-option" id="shareTwitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </div>
+                    <div class="share-option" id="shareWhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </div>
+                    <div class="share-option" id="shareEmail">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </div>
+                    <div class="share-option" id="shareSMS">
+                        <i class="fas fa-sms"></i>
+                        <span>SMS</span>
+                    </div>
+                </div>
+                <div class="share-url-section">
+                    <label for="shareUrl">Share Link:</label>
+                    <div class="url-copy-container">
+                        <input type="text" id="shareUrl" readonly>
+                        <button class="copy-url-btn" id="copyUrlBtn">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="luxury-footer">
+            <div class="footer-content">
+                <div class="footer-logo">GRAN CAFFÈ L'AQUILA</div>
+                <div class="footer-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 1716 Chestnut St, Philadelphia, PA</p>
+                    <p><i class="fas fa-phone"></i> +1 (215) 568-5600</p>
+                    <p><i class="fas fa-envelope"></i> info@grancaffelaquila.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2023 Gran Caffè L'Aquila. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
